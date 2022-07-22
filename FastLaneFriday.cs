@@ -7,7 +7,28 @@ namespace Nerd
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, Nerd head!");
+            //Console.WriteLine("Hello, Nerd head!");
+            static void DisplayCoolMessage(ConsoleColor textColor, ConsoleColor backgroundColor, string message)
+            {
+                ConsoleColor oldTextColor = Console.ForegroundColor;
+                ConsoleColor oldBackgroundColor = Console.BackgroundColor;
+
+                Console.ForegroundColor = textColor;
+                Console.BackgroundColor = backgroundColor;
+                Console.WriteLine(message);
+
+                Console.ForegroundColor = oldTextColor;
+                Console.BackgroundColor = oldBackgroundColor;
+
+            }
+            Console.WriteLine("oh joy fun with args and etc");
+            DisplayCoolMessage(message: "Mmm cool", textColor: ConsoleColor.DarkRed, backgroundColor: ConsoleColor.Green);
+            DisplayCoolMessage(message: "whoops", textColor: ConsoleColor.Blue, backgroundColor: ConsoleColor.Yellow);
+            Console.ReadLine();
+
+
+        }
+            #region using optional param args
 
             static void EnterLogData(string message, string owner = "Programmer")
             {
@@ -21,15 +42,7 @@ namespace Nerd
             EnterLogData("oh no gid i cant find data");
             EnterLogData("oh no i forgot to distrobut payroll");
             Console.ReadLine();
-
-
-
-
-
-
-
-
-
+            #endregion end of optional param args
 
             #region
 
@@ -94,12 +107,12 @@ namespace Nerd
 
             }*/
             #endregion End of Local Functions
-        }
+        /*}
         public static void SwapStrings(ref string s1, ref string s2)
         {
             string tempStr = s1;
             s1 = s2;
             s2 = tempStr;
-        }
+        }*/
     }
 }
