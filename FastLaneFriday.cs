@@ -9,13 +9,37 @@ namespace Nerd
         {
             Console.WriteLine("Hello, Nerd head!");
 
+            static void EnterLogData(string message, string owner = "Programmer")
+            {
+                Console.Beep();
+                Console.WriteLine("Error: {0}", message);
+                Console.WriteLine("Owner of Error: {0}", owner);
+
+            }
+
+            Console.WriteLine("its friday with methods");
+            EnterLogData("oh no gid i cant find data");
+            EnterLogData("oh no i forgot to distrobut payroll");
+            Console.ReadLine();
+
+
+
+
+
+
+
+
+
+
+            #region
+
             string str1 = "Flip";
             string str2 = "Flop";
             Console.WriteLine("Before: {0}, {1}", str1, str2);
             SwapStrings(ref str1, ref str2);
             Console.WriteLine("After: {0}, {1}", str1, str2);
             Console.ReadLine();
-
+            #endregion
 
             #region Using the output param, also known as OUT modifier
             /*
